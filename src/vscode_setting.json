@@ -1,0 +1,23 @@
+{
+  "files.autoSave":"afterDelay",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.wordWrap": "on",
+  "workbench.activityBar.visible": true,
+  "workbench.editor.showTabs": true,
+  "editor.tabSize": 2,
+  "html.format.endWithNewline": true,
+  "editor.fontFamily": "cica",
+  "editor.fontWeight": "500",
+  "editor.fontSize": 16,
+  "terminal.integrated.fontFamily": "cica",
+  "terminal.integrated.fontSize": 16,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby"
+  }
+}

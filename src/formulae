@@ -1,0 +1,17 @@
+tap homebrew/core
+install git
+install nodenv
+install node-build
+install tree
+install mas
+tap homebrew/cask
+cask install visual-studio-code
+cask install chromium
+cask install firefox
+cask install vagrant
+cask install virtualbox
+cask install slack
+cask install appcleaner
+cask install google-japanese-ime
+tap rcmdnk/file
+install brew-file
