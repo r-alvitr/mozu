@@ -13,9 +13,9 @@ wakeup/parallel:
 	echo "🎉 wakeup parallel📝"
 
 install:
-	@parallel -a ./src/formulae brew && \
+	@parallel -a ./src/list/formulae brew && \
 	echo "🎉 brew formulae installed🏎"
-	@parallel -a ./src/appstore mas install && \
+	@parallel -a ./src/list/appstore mas install && \
 	echo "🎉 App Store application installed🍎"
 
 setup/gitignore:
@@ -35,7 +35,7 @@ setup/proxy:
 	echo "🎉 setup proxy for sysken🐟"
 
 setup/vscode:
-	@parallel -a ./src/vscode_ext.txt code --install-extension
+	@parallel -a ./src/list/vscode_ext.txt code --install-extension
 	@touch ~/Library/Application\ Support/Code/User/settings.json && \
 	cat ./src/vscode_setting.json > ~/Library/Application\ Support/Code/User/settings.json
 	echo "🎉 setup VSCode✍️"
