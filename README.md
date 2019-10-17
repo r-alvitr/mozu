@@ -11,7 +11,8 @@
 * [x] :zap: installの並列化
 * [x] :fire: dockerのdmg download
 * [ ] :package: dockerのinstall
-* [ ] cica fontのinstall
+* [ ] cica fontのinstall // cicaフォントの用意はした
 * [ ] vscodeの設定とか
 * [ ] ime設定
 * [ ] dockerの展開
+* [ ] gitのcommit template設定
