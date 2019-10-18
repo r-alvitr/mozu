@@ -1,10 +1,8 @@
-tap homebrew/core
 install git
 install nodenv
 install node-build
 install tree
 install mas
-tap homebrew/cask
 cask install visual-studio-code
 cask install chromium
 cask install firefox

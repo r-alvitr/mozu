@@ -1,16 +1,10 @@
-wakeup/xcode:
-	@xcode-select --install && \
-	echo "🎉 wakeup xcode🛠"
-
 wakeup/brew:
-	@/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && \
-	brew update && brew upgrade && brew cleanup && brew doctor && \
-	brew tap caskroom/cask
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && \
+	brew update && brew upgrade && brew cleanup && brew doctor && brew cask
 	echo "🎉 wakeup homebrew🍺"
 
 wakeup/parallel:
-	@brew install parallel && \
-	yes [will cite] | parallel --bibtex && \
+	brew install parallel && \
 	echo "🎉 wakeup parallel📝"
 
 install:
@@ -26,7 +20,7 @@ setup/gitignore:
 
 setup/nodenv:
 	@echo '# nodenv' >> ~/.bash_profile && \
-	echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bash_profile && \
+	echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bash_profile && \ # なぜか$Hと$Pがエスケープされる
 	echo 'eval "$(nodenv init -)"' >> ~/.bash_profile && \
 	echo "🎉 setup nodenv🎗"
 
@@ -42,12 +36,11 @@ setup/vscode:
 	echo "🎉 setup VSCode✍️"
 
 get/docker:
-	@open https://download.docker.com/mac/stable/Docker.dmg
+	@open https://download.docker.com/mac/stable/Docker.dmg && \
 	echo "🎉 get docker dmg🐳"
 
 magic:
-	@make wakeup/xcode && \
-	make wakeup/brew && \
+	@make wakeup/brew && \
 	make wakeup/parallel && \
 	make install
 	@make setup/gitignore
