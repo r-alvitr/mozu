@@ -34,6 +34,14 @@ setup/proxy:
 	cat ./src/proxy.sh >> ~/.bash_profile && \
 	echo "🎉 setup proxy for sysken🐟"
 
+setup/tt:
+	@touch ~/.inputrc && \
+	cat ./src/inputrc >> ~/.inputrc && \
+	echo "🎉 setup tab comp📜"
+	@defaults write com.apple.finder AppleShowAllFiles TRUE && \
+	killall Finder &&\
+	echo "🎉 setup dot file show📜"
+
 setup/vscode:
 	@parallel -a ./src/list/vscode_ext.txt code --install-extension
 	@touch ~/Library/Application\ Support/Code/User/settings.json && \
