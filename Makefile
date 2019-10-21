@@ -13,10 +13,14 @@ install:
 	@parallel -a ./src/list/appstore mas install && \
 	echo "🎉 App Store application installed🍎"
 
-setup/gitignore:
+setup/git:
 	@touch ~/.gitignore_global && \
 	cat ./src/gitignore_global >> ~/.gitignore_global && \
-	git config --global core.excludesfile ~/.gitignore_global && \
+	git config --global core.excludesfile ~/.gitignore_global
+	@touch ~/.gitcommit-template && \
+	cat ./src/commit-template >> ~/.gitcommit-template && \
+	git config --global commit.template ~/.gitcommit-template
+	@echo "🎉 setup git commit template📜" && \
 	echo "🎉 setup gitignore_global📜"
 
 setup/nodenv:
