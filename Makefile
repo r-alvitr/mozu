@@ -12,9 +12,11 @@ wakeup/parallel:
 	echo "🎉 wakeup parallel📝"
 
 install:
-	@parallel -a ./src/list/formulae brew && \
+	@chmod 755 ./src/list/formulae.sh && \
+	./src/list/formulae.sh && \
 	echo "🎉 brew formulae installed🏎"
-	@parallel -a ./src/list/appstore mas install && \
+	@chmod 755 ./src/list/appstore.sh && \
+	./src/list/appstore.sh && \
 	echo "🎉 App Store application installed🍎"
 
 setup/git:
