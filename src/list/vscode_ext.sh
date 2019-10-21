@@ -1,3 +1,4 @@
+pkglist=(
 bung87.vscode-gemfile
 CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
@@ -21,3 +22,8 @@ rebornix.ruby
 shd101wyy.markdown-preview-enhanced
 vincaslt.highlight-matching-tag
 yzhang.markdown-all-in-one
+)
+
+for i in ${pkglist[@]}; do
+  code --install-extension $i
+done

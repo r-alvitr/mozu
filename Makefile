@@ -16,6 +16,7 @@ install:
 setup/gitignore:
 	@touch ~/.gitignore_global && \
 	cat ./src/gitignore_global >> ~/.gitignore_global && \
+	git config --global core.excludesfile ~/.gitignore_global && \
 	echo "🎉 setup gitignore_global📜"
 
 setup/nodenv:
