@@ -1,3 +1,7 @@
+wakeup/xcode:
+	@xcode-select --install && \
+	echo "🎉 wakeup homebrew🛠"
+
 wakeup/brew:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && \
 	brew update && brew upgrade && brew cleanup && brew doctor && brew cask
