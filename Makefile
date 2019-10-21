@@ -26,7 +26,7 @@ setup/git:
 setup/nodenv:
 	@echo '# nodenv' >> ~/.bash_profile && \
 	echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bash_profile && \ # なぜか$Hと$Pがエスケープされる
-	echo 'eval "$(nodenv init -)"' >> ~/.bash_profile && \
+	echo 'eval "$(nodenv init -)"' >> ~/.bash_profile && \ # なぜかeval以降がエスケープされていた
 	echo "🎉 setup nodenv🎗"
 
 setup/proxy:
