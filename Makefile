@@ -47,10 +47,12 @@ setup/tt:
 	echo "🎉 setup dot file show📜"
 
 setup/vscode:
-	@parallel -a ./src/list/vscode_ext.txt code --install-extension
+	@chmod 755 ./src/list/vscode_ext.sh && \
+	./src/list/vscode_ext.sh && \
+	echo "🎉 setup VSCode extensions✍️"
 	@touch ~/Library/Application\ Support/Code/User/settings.json && \
 	cat ./src/vscode_setting.json > ~/Library/Application\ Support/Code/User/settings.json
-	echo "🎉 setup VSCode✍️"
+	echo "🎉 setup VSCode settings✍️"
 
 get/docker:
 	@open https://download.docker.com/mac/stable/Docker.dmg && \
